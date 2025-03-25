@@ -2,17 +2,42 @@
     border: 1px white solid;
     padding: 1em;
 
-    .count {
-        font-size: medium;
+    h1 {
+        font-size: 3em;
+
+        .count {
+            font-size: 0.5em;
+        }
     }
 
-    button {
-        width: 100%;
+    .input-container {
+
+        input,
+        button {
+            all: unset;
+            width: 100%;
+            font-size: 2em;
+        }
+
+        input {
+            background-color: white;
+            color: black;
+        }
+
+        button {
+            text-align: center;
+            border: 1px solid white;
+
+            /*accounting for left/right border*/
+            width: calc(100% - 2px);
+            cursor: pointer;
+        }
     }
 
     .descriptor-container {
         margin-top: 1em;
         max-height: 10em;
         overflow-y: auto;
+        font-size: 2em;
     }
 }
