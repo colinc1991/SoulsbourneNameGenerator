@@ -1,0 +1,18 @@
+.container {
+    border: 1px white solid;
+    padding: 1em;
+
+    .count {
+        font-size: medium;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .descriptor-container {
+        margin-top: 1em;
+        max-height: 10em;
+        overflow-y: auto;
+    }
+}

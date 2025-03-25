@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>{{inputType}} <span class="count"> ({{descriptors.length}})</span></h1>
+    <input type="text" name="input" id="input" [(ngModel)]="newDescriptor">
+    <br>
+    <button (click)="addInput()">Add</button>
+
+    <div class="descriptor-container">
+        <div *ngFor="let descriptor of descriptors">
+            {{descriptor}}
+        </div>
+    </div>
+</div>

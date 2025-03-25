@@ -1,0 +1,11 @@
+.base-input-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button-container,
+.result-container {
+    margin-top: 1em;
+    display: flex;
+    justify-content: center;
+}
