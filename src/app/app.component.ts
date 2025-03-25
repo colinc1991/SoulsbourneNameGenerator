@@ -22,10 +22,11 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.playSound();
         this.adjectives = this.descriptorService.adjectives;
         this.nouns = this.descriptorService.nouns;
         this.locations = this.descriptorService.locations;
+        this.youDiedSound.src = 'assets/youdied.wav';
+        this.youDiedSound.load();
     }
 
     getName() {
@@ -34,8 +35,8 @@ export class AppComponent implements OnInit {
     }
 
     playSound(): void {
-        this.youDiedSound.src = 'assets/youdied.wav';
-        this.youDiedSound.load();
-        this.youDiedSound.play().catch(error => console.error('Error playing audio:', error));
+        if (this.youDiedSound.paused) {
+            this.youDiedSound.play().catch(error => console.error('Error playing audio:', error));
+        }
     }
 }
