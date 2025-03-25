@@ -21,7 +21,7 @@ export class BaseInputComponent implements OnInit {
     }
 
     addInput() {
-        if (!this.descriptors.includes(this.newDescriptor)) {
+        if (!this.descriptors.includes(this.newDescriptor) && this.newDescriptor.length > 0) {
             this.descriptors.push(this.newDescriptor);
             this.descriptors.sort(function (a, b) {
                 return a.toLowerCase().localeCompare(b.toLowerCase());
